@@ -28,43 +28,64 @@ namespace Laboratorio_5
             calculadoras.Add(perroFactorial);
             calculadoras.Add(robotFibonacci);
             calculadoras.Add(personaQueSuma5);
-
         }
 
-        public void Calcular(int operacion)
+        public void Calcular(int calculos)
         {
-            if (operacion == 5)
+            while (calculos>0)
             {
-              Console.WriteLine(calculadoras[4].Calcular(numero));
-              numero = calculadoras[4].Calcular(numero);
-            }
-            else if (operacion == 4)
-            {
-                Console.WriteLine(calculadoras[3].Calcular(numero));
-                numero = calculadoras[3].Calcular(numero);
-            }
-            else if (operacion == 3)
-            {
-                Console.WriteLine(calculadoras[2].Calcular(numero));
-                numero = calculadoras[2].Calcular(numero);
-            }
-            else if (operacion == 2)
-            {
-                Console.WriteLine(calculadoras[1].Calcular(numero));
-                numero = calculadoras[1].Calcular(numero);
-            }
-            else if (operacion == 1)
-            {
-                Console.WriteLine(calculadoras[0].Calcular(numero));
-                numero = calculadoras[0].Calcular(numero);
-            }
+                Console.WriteLine("Que operacion desea realizar: ");
+                Console.WriteLine("[1] Calculadora - Cuadrado");
+                Console.WriteLine("[2] Calculadora - Cubo");
+                Console.WriteLine("[3] Calculadora - Perro Factorial");
+                Console.WriteLine("[4] Calculadora - RobotFibonacci");
+                Console.WriteLine("[5] Calculadora - PersonaQueSuma5");
+                Console.WriteLine();
+
+                int operacion = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+
+                if (operacion == 5)
+                {
+                    Console.WriteLine("Su numero '" + numero + "' resuelto es: ");
+                    Console.WriteLine(calculadoras[4].Calcular(numero));
+                    numero = calculadoras[4].Calcular(numero);
+                    calculos--;
+                }
+                else if (operacion == 4)
+                {
+                    Console.WriteLine("Su numero '" + numero + "' resuelto es: ");
+                    Console.WriteLine(calculadoras[3].Calcular(numero));
+                    numero = calculadoras[3].Calcular(numero);
+                    calculos--;
+                }
+                else if (operacion == 3)
+                {
+                    Console.WriteLine("Su numero '" + numero + "' resuelto es: ");
+                    Console.WriteLine(calculadoras[2].Calcular(numero));
+                    numero = calculadoras[2].Calcular(numero);
+                    calculos--;
+                }
+                else if (operacion == 2)
+                {
+                    Console.WriteLine("Su numero '" + numero + "' resuelto es: ");
+                    Console.WriteLine(calculadoras[1].Calcular(numero));
+                    numero = calculadoras[1].Calcular(numero);
+                    calculos--;
+                }
+                else if (operacion == 1)
+                {
+                    Console.WriteLine("Su numero '" + numero + "' resuelto es: ");
+                    Console.WriteLine(calculadoras[0].Calcular(numero));
+                    numero = calculadoras[0].Calcular(numero);
+                    calculos--;
+                }
+            } 
         }
 
         public int GetNumero()
         {
             return numero;
         }
-
-
     }
 }

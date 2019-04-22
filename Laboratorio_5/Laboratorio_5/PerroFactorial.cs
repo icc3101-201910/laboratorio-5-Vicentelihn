@@ -10,16 +10,22 @@ namespace Laboratorio_5
     {
         public int Calcular(int x)
         {
-            //int x = Calcular();
+
             int resultado = 1;
 
             for (int i = 1; i <= x; i++)
             {
-                return resultado = resultado * i;
+                resultado = resultado * i;
             }
 
-            return resultado;
+            if (resultado==0)
+            {
+                return 1;
+            }
+            else
+            {
+                return resultado;
+            }
         }
-
     }
 }

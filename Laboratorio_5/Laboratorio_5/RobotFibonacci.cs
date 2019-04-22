@@ -10,11 +10,18 @@ namespace Laboratorio_5
     {
         public int Calcular(int x)
         {
-            return x + 4;
+            int a, b,auxiliar, i;
+            a = 0;
+            b = 1;
+            for (i = 0; i < x; i++)
+            {
+                auxiliar = a;
+                a = b;
+                b = auxiliar + a;
+                
+            }
+            return a;
+
         }
-
-
-
-
     }
 }
